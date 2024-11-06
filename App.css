@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f0; 
+}
+
+.Container {
+  height: 500px;
+  width: 500px;
+  background-color: rgb(189, 103, 103); 
+  border-radius: 30px;
+  text-align: center;
+}
+
+.heading{
+  font-size: 30px;
+  padding: 20px;
+  font-weight: bold;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.question{
+  padding: 30px;
+  font-size: 20px;
+}
+
+h5{
+  font-size: 18px;
+  padding: 12px;
+}
+
+.options { 
+  height: 135px;
+  width: 50%;
+  text-align: left;
+  padding: 10px;
+  margin: 0 auto; /* centers .options horizontally */
+  font-size: 20px;
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: bisque;
+  font-family: 'Poppins';
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.2s ease; /* Added opacity transition */
+}
+
+button:hover {
+  background-color: rgb(12, 8, 126); 
+  transform: scale(1.1); /* Slightly increase the size on hover */
+  opacity: 0.8; /* Apply light opacity */
+}
+
+.options input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px; /* Keep the size fixed */
+  height: 18px;
+  background-color: #fff;
+  border: 2px solid #84e57a;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+  position: relative;
+}
+
+.options input[type="radio"]::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(111, 206, 15);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.options input[type="radio"]:checked::before {
+  opacity: 1;
+}
+
+.scores {
+  width: 60%;  /* Adjust width as needed */
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto; /* Center horizontally */
+}
+
+.result {
+  font-size: 45px;
+  font-weight: bold;
+  padding: 60px; 
+}
+
+.score {
+  font-size: 40px;
+  padding-top: 10px;
+}
+
